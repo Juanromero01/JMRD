@@ -1,18 +1,32 @@
-/* style.css */
-
 body {
   font-family: Arial, sans-serif;
-  background: #dbeafe;
+
+  background-image: url("dominican-bg.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
   padding: 20px;
 }
 
+
 .invoice {
-  background: white;
+  background: rgba(255,255,255,0.92);
+
   max-width: 850px;
+
   margin: auto;
+
   padding: 30px;
+
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 h1 {
@@ -110,7 +124,6 @@ td input {
   color: #15803d;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
 
   .top-section {
