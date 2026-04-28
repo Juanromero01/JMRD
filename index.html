@@ -1,0 +1,127 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Simple Invoice</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="invoice">
+
+  <h1>INVOICE</h1>
+
+  
+  <div class="top-section">
+
+    <div>
+      <h3>JMRD</h3>
+      <p>853 Glenmore Avenue</p>
+      <p>New York, NY</p>
+      <p>(555) 123-4567</p>
+    </div>
+
+    <div>
+      <label>Invoice #</label>
+      <input type="text" value="1001">
+
+      <br><br>
+
+      <label>Date</label>
+      <input type="date">
+    </div>
+
+  </div>
+
+
+  <div class="bill-section">
+
+    <h3>Bill To</h3>
+
+    <input type="text" placeholder="Customer Name">
+    <input type="text" placeholder="Address">
+
+  </div>
+
+  <!-- Table -->
+  <table>
+
+    <tr>
+      <th>Item</th>
+      <th>Qty</th>
+      <th>Price</th>
+      <th>Total</th>
+    </tr>
+
+    <tr>
+      <td><input type="text" placeholder="Item"></td>
+
+      <td>
+        <input type="number" id="qty" value="1">
+      </td>
+
+      <td>
+        <input type="number" id="price" value="100">
+      </td>
+
+      <td>
+        <input type="text" id="total" readonly>
+      </td>
+    </tr>
+
+  </table>
+
+  <div class="totals">
+
+    <p>Subtotal: $<span id="subtotal">0</span></p>
+
+    <p>Tax (10%): $<span id="tax">0</span></p>
+
+    <h2>Total: $<span id="grandTotal">0</span></h2>
+
+  </div>
+
+</div>
+
+<script>
+
+function calculate() {
+
+  let qty = document.getElementById("qty").value;
+
+  let price = document.getElementById("price").value;
+
+  let subtotal = qty * price;
+
+  let tax = subtotal * 0.10;
+
+  let grandTotal = subtotal + tax;
+
+  document.getElementById("total").value =
+    "$" + subtotal.toFixed(2);
+
+  document.getElementById("subtotal").innerHTML =
+    subtotal.toFixed(2);
+
+  document.getElementById("tax").innerHTML =
+    tax.toFixed(2);
+
+  document.getElementById("grandTotal").innerHTML =
+    grandTotal.toFixed(2);
+}
+
+document.getElementById("qty").addEventListener("input", calculate);
+
+document.getElementById("price").addEventListener("input", calculate);
+
+calculate();
+
+</script>
+
+</body>
+</html>

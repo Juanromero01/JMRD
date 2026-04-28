@@ -1,0 +1,121 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #dbeafe;
+  padding: 20px;
+}
+
+.invoice {
+  background: white;
+  max-width: 850px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 30px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  background: #eff6ff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.top-section h3 {
+  color: #1d4ed8;
+}
+
+.top-section input {
+  padding: 8px;
+  border: 1px solid #93c5fd;
+  border-radius: 5px;
+}
+
+.bill-section {
+  background: #fef3c7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.bill-section h3 {
+  color: #d97706;
+  margin-bottom: 10px;
+}
+
+.bill-section input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #fbbf24;
+  border-radius: 5px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid #cbd5e1;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+td {
+  background: #f8fafc;
+}
+
+td input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #94a3b8;
+  border-radius: 5px;
+}
+
+.totals {
+  background: #dcfce7;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.totals p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #166534;
+}
+
+.totals h2 {
+  color: #15803d;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+
+  .top-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
